@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ancient Georgian Antiques Store - Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Ancient Georgian Antiques</h1>
+    <p class="subtitle">Preserving Georgia’s Rich Heritage</p>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="items.html" class="active">Items</a></li>
+      <li><a href="promotions.html">Promotions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="content-section">
+      <h2>Explore Our Collection</h2>
+      <p>Search for items in our inventory of swords, pottery, coins, and more.</p>
+    </section>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for an antique item..."/>
+    </div>
+
+    <!-- CART DISPLAY -->
+    <div id="cartContainer" class="cart-container">
+      <!-- Cart items will be rendered here -->
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal"></p>
+    </div>
+
+    <div class="items-container" id="itemsContainer">
+      <!-- Items will be displayed here dynamically via script.js -->
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Antique Georgian Treasures - Andro Liluashvili</p>
+  </footer>
+
+  <!-- Link to the external JavaScript file for inventory/search and cart -->
+  <script src="script.js"></script>
+</body>
+</html>

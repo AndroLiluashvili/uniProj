@@ -1,4 +1,3 @@
-// Abstract base class
 class StoreItem {
   constructor(id, name, price, quantity) {
     if (new.target === StoreItem) {
@@ -19,7 +18,6 @@ class StoreItem {
   }
 }
 
-// Item class
 class Item extends StoreItem {
   constructor(id, name, category, era, region, condition, authenticity, price, quantity, imagePath) {
     super(id, name, price, quantity);
@@ -58,7 +56,6 @@ class Item extends StoreItem {
   }
 }
 
-// WeaponItem subclass
 class WeaponItem extends Item {
   constructor(id, name, era, region, condition, authenticity, price, quantity, imagePath, bladeLength) {
     super(id, name, "Weapon", era, region, condition, authenticity, price, quantity, imagePath);
@@ -70,7 +67,6 @@ class WeaponItem extends Item {
   }
 }
 
-// Inventory class
 class Inventory {
   constructor() {
     this.items = [];
@@ -97,7 +93,6 @@ class Inventory {
   }
 }
 
-// Cart class
 class Cart {
   constructor() {
     this.cartItems = [];
@@ -139,11 +134,9 @@ class Cart {
   }
 }
 
-// Initialize Inventory and Cart
 const myInventory = new Inventory();
 let myCart = new Cart();
 
-// Sample Items
 const item1 = new WeaponItem(1, "Antique Georgian Sword", "18th Century", "Kakheti", "Good", "Verified", 500, 2, "images/sword.png", 85);
 const item2 = new Item(2, "Clay Pottery Vessel", "Pottery", "5th Century BC", "Colchis", "Fair", "Partially Verified", 300, 5, "images/vessel.png");
 const item3 = new Item(3, "Georgian Silver Coin", "Coin", "12th Century", "Iberia", "Excellent", "Verified", 150, 10, "images/coin.png");
@@ -162,7 +155,6 @@ myInventory.addItem(item6);
 myInventory.addItem(item7);
 myInventory.addItem(item8);
 
-// Render items to DOM
 function renderItems(items) {
   const container = document.getElementById('itemsContainer');
   container.innerHTML = "";
